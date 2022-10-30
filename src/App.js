@@ -27,7 +27,6 @@ useEffect (()=>{
     localStorage.clear();
     setIsLoggedIn(false);
   };
-
   return (
     <AuthContext.Provider value={{
       isLoggedIn: isLoggedIn,
