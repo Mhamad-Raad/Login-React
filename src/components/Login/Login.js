@@ -20,7 +20,7 @@ const passwordHandler = (state, action) => {
   if(action.type === 'USER_INPUT'){
     return {value: action.value, valid: action.value.includes('@')};
   } else if (action.type === 'INPUT_BLUR') {
-    return {value: state.value, valid: state.value.includes('@')};
+    return {value: state.value, valid: state.value.length > 3};
   }
 
   return {value: '', valid: false};
